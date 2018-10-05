@@ -1,0 +1,52 @@
+function addOwner
+	Input:
+	{
+		owners wallet address
+	}
+	Result: a new owner is added into the contract.
+	Requires: callable only by admin(master owner)
+
+
+function removeOwner
+	Input:
+	{
+		owners wallet address
+	}
+	Result: the specified owner is removed from the contract.
+	Requires: callable only by admin(master owner)
+
+
+function withdraw
+	Input:
+	{
+		amount to be withdrawn
+	}
+	Result: a new withdraw ether request is submitted into the wallet.
+	Requires: callable only by owners
+
+
+function transferTo
+	Input:
+	{
+		destination wallet address,
+		amount to be withdrawn
+	}
+	Result: a new transfer ether request is submitted into the wallet.
+	Requires: callable only by owners
+
+
+function signTransaction
+	Input:
+	{
+		integer - unique tx ID
+	}
+	Result: an owner can show his/her approval of the given tx. If approval count exceeds minimum required, the tx is executed.
+	Requires: callable only by owners
+
+function deleteTransaction
+	Input:
+	{
+		integer - unique tx ID
+	}
+	Result: the specified tx is removed from the pending list.
+	Requires: callable only by owners
