@@ -1,4 +1,4 @@
-// Trigger this function when someone wants to claim extra token which went into vesting due to over purchase
+// Triggr this function when someone wants to claim extra token which went into vesting due to over purchase
 
 function getMyRefundJS()
 {
